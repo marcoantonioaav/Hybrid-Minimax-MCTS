@@ -9,27 +9,6 @@ import other.model.Model;
 import other.trial.Trial;
 import search.mcts.MCTS;
 
-
-/**
- * An example of a custom implementation of a match between different AIs,
- * i.e. not using the built-in EvalGamesSet functionality of Ludii.
- * 
- * By creating custom implementations of experiments, we can more
- * easily add our own custom stats to track, and request moves from AIs
- * that do not implement Ludii's abstract AI class. The downside is that
- * more boilerplate code must be written.
- * 
- * See RunLudiiMatch for an example that uses Ludii's built-in EvalGamesSet 
- * implementation.
- * 
- * Note that this example does not provide all of the functionality included
- * in the built-in EvalGamesSet implementation. For instance, this example will always
- * use the same agents for the same player number (e.g. Random AI always player
- * 1, UCT always player 2), whereas Ludii's built-in EvalGamesSet implementation can
- * rotate through assignments of agents to player numbers.
- * 
- * @author Dennis Soemers
- */
 public class App {
 	static final HybridMinimaxMCTS HYBRID_MINIMAX_MCTS = new HybridMinimaxMCTS();
 	static final List<String> GAME_NAMES = List.of("Tic-tac-toe.lud", "Tapatan.lud", "Alquerque.lud", "Reversi.lud");
